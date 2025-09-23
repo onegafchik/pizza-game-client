@@ -27,7 +27,7 @@ export class AboutScene extends Scene {
 
         GameScreen.setCurrentColor = "#ffffff"
         GameScreen.print(Language.getText("developer"), GameScreen.getWidth / 2, 8, 32, "center")
-        GameScreen.print("NEkTARIN", GameScreen.getWidth / 2, 36, 24, "center")
+        GameScreen.print("NEkTARIN (raro4ka)", GameScreen.getWidth / 2, 36, 24, "center")
 
         this.githubButton.draw(currentTime)
         this.telegramButton.draw(currentTime)

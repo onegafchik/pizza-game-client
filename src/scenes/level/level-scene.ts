@@ -26,7 +26,7 @@ export class LevelScene extends Scene {
 
     private oxidizedStage: number = 0
     private readonly maxOxidizedStage = 3
-    private readonly oxidizedTimer: Timer = new Timer(120000, () => (this.oxidizedStage = Math.min(this.oxidizedStage + 1, this.maxOxidizedStage)), true)
+    private readonly oxidizedTimer: Timer = new Timer(100000, () => (this.oxidizedStage = Math.min(this.oxidizedStage + 1, this.maxOxidizedStage)), true)
 
     private readonly smellAnimation: SpriteAnimation = new SpriteAnimation(150, [0, 1, 2, 3])
     private readonly bigMoneyAnimation: SpriteAnimation = new SpriteAnimation(100, [0, 1, 2, 3, 4, 5, 6, 7])
@@ -90,11 +90,11 @@ export class LevelScene extends Scene {
                             break
                         }
                         case "big-money": {
-                            GlobalStorage.addMoney(50)
+                            GlobalStorage.addMoney(100)
                             break
                         }
                         case "totem": {
-                            this.player.getIsHasShield && GlobalStorage.addMoney(10)
+                            this.player.getIsHasShield && GlobalStorage.addMoney(30)
                             this.player.setIsShield = true
                             break
                         }

@@ -1,0 +1,50 @@
+{
+    "click": {
+        "english": "Click!",
+        "russian": "Кликни!"
+    },
+    "loading resources": {
+        "english": "Loading resources...",
+        "russian": "Загрузка ресурсов..."
+    },
+    "loading data": {
+        "english": "Loading data...",
+        "russian": "Загрузка данных..."
+    },
+    "data load error": {
+        "english": "Data load error",
+        "russian": "Ошибка загрузки данных"
+    },
+    "random mode": {
+        "english": "Random pizzas",
+        "russian": "Случайные пиццы"
+    },
+    "pause": {
+        "english": "Pause",
+        "russian": "Пауза"
+    },
+    "change controls": {
+        "english": "Select the control type",
+        "russian": "Выберите тип управления"
+    },
+    "exit from account": {
+        "english": "Are you sure you want to log out of your account?",
+        "russian": "Вы точно хотите выйти из аккаунта?"
+    },
+    "stickers": {
+        "english": "Stickers",
+        "russian": "Стикеры"
+    },
+    "devblog": {
+        "english": "Devblog",
+        "russian": "Девблог"
+    },
+    "developer": {
+        "english": "Developer",
+        "russian": "Разработчик"
+    },
+    "testers": {
+        "english": "Testers",
+        "russian": "Тестеры"
+    }
+}

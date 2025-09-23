@@ -1,0 +1,361 @@
+[
+    {
+        "name": "pepperoni",
+        "title": {
+            "english": "Pepperoni",
+            "russian": "Пепперони"
+        },
+        "description": {
+            "english": "Classic. Everyone knows her.",
+            "russian": "Классика. Каждый знает её."
+        },
+        "cost": -1
+    },
+    {
+        "name": "farmhouse",
+        "title": {
+            "english": "Farmhouse",
+            "russian": "Фермерская"
+        },
+        "description": {
+            "english": "Pizza for getting a taste of village life.",
+            "russian": "Пицца для получения вкуса деревенской жизни."
+        },
+        "cost": 50
+    },
+    {
+        "name": "margaret",
+        "title": {
+            "english": "Margaret",
+            "russian": "Маргарита"
+        },
+        "description": {
+            "english": "Who doesn't know this pizza?",
+            "russian": "Кто не знает эту пиццу?"
+        },
+        "cost": 150
+    },
+    {
+        "name": "cheese",
+        "title": {
+            "english": "Cheese",
+            "russian": "Сырная"
+        },
+        "description": {
+            "english": "Cheese lovers will like this pizza.",
+            "russian": "Любителям сыра придется по вкусу эта пицца."
+        },
+        "cost": 300
+    },
+    {
+        "name": "spice",
+        "title": {
+            "english": "Spice",
+            "russian": "Спайси"
+        },
+        "description": {
+            "english": "Ahhh! Hot! Hot jalapeno pepper will surprise you.",
+            "russian": "Аааа! Горячо! Острый перец халапеньо удивит тебя."
+        },
+        "cost": 2000
+    },
+    {
+        "name": "tuscany",
+        "title": {
+            "english": "Tuscany",
+            "russian": "Тоскана"
+        },
+        "description": {
+            "english": "A taste from Florence. It will cover the Renaissance.",
+            "russian": "Вкус из Флоренции. Она накроет эпохой возрождения."
+        },
+        "cost": 700
+    },
+    {
+        "name": "carbonara",
+        "title": {
+            "english": "Carbonara",
+            "russian": "Карбонара"
+        },
+        "description": {
+            "english": "Standard ingredients - delicious pizza.",
+            "russian": "Стандартные ингредиенты - вкусная пицца."
+        },
+        "cost": 300
+    },
+    {
+        "name": "belarusian",
+        "title": {
+            "english": "Belarusian",
+            "russian": "Белорусская"
+        },
+        "description": {
+            "english": "The main ingredient of this pizza is potatoes.",
+            "russian": "Главным ингредиентом этой пиццы является картофель."
+        },
+        "cost": 800
+    },
+    {
+        "name": "hawaiian",
+        "title": {
+            "english": "Hawaiian",
+            "russian": "Гавайская"
+        },
+        "description": {
+            "english": "There are pineapples there, it's terrible!",
+            "russian": "Там есть ананасы, ужасно!"
+        },
+        "cost": 300
+    },
+    {
+        "name": "diamond",
+        "title": {
+            "english": "Diamond",
+            "russian": "Алмаз"
+        },
+        "description": {
+            "english": "Not a single tooth will bite through this pizza.",
+            "russian": "Ни один зуб не прокусит эту пиццу."
+        },
+        "cost": -1,
+        "crystal": true
+    },
+    {
+        "name": "ruby",
+        "title": {
+            "english": "Ruby",
+            "russian": "Рубин"
+        },
+        "description": {
+            "english": "Is this pizza definitely not fake?",
+            "russian": "Эта пицца точно не подделка?"
+        },
+        "cost": -1,
+        "crystal": true
+    },
+    {
+        "name": "emerald",
+        "title": {
+            "english": "Emerald",
+            "russian": "Изумруд"
+        },
+        "description": {
+            "english": "Hmm hmm... Hmm.",
+            "russian": "Хмм хм... Хммм."
+        },
+        "cost": -1,
+        "crystal": true
+    },
+    {
+        "name": "mexican",
+        "title": {
+            "english": "Mexican",
+            "russian": "Мексиканская"
+        },
+        "description": {
+            "english": "Spicey has a worthy rival.",
+            "russian": "У Спайси появился достойный соперник."
+        },
+        "cost": 1200
+    },
+    {
+        "name": "pumpkin",
+        "title": {
+            "english": "Pumpkin",
+            "russian": "Тыквенная"
+        },
+        "description": {
+            "english": "Yes! It's not pizza, but it's definitely not worse.",
+            "russian": "Да! Это не пицца, но точно не хуже."
+        },
+        "cost": 500
+    },
+    {
+        "name": "amethyst",
+        "title": {
+            "english": "Amethyst",
+            "russian": "Аметист"
+        },
+        "description": {
+            "english": "Gutter...",
+            "russian": "Желоба..."
+        },
+        "cost": -1,
+        "crystal": true
+    },
+    {
+        "name": "jade",
+        "title": {
+            "english": "Jade",
+            "russian": "Нефрит"
+        },
+        "description": {
+            "english": "Straight from the Chinese palaces.",
+            "russian": "Прямиком из китайских дворцов."
+        },
+        "cost": -1,
+        "crystal": true
+    },
+    {
+        "name": "topaz",
+        "title": {
+            "english": "Topaz",
+            "russian": "Топаз"
+        },
+        "description": {
+            "english": "No! It\\'s not caramel.",
+            "russian": "Нет! Это не карамель."
+        },
+        "cost": -1,
+        "crystal": true
+    },
+    {
+        "name": "italian",
+        "title": {
+            "english": "Italian",
+            "russian": "Итальянская"
+        },
+        "description": {
+            "english": "Real, Neapolitan pizza.",
+            "russian": "Настоящая, Неаполитанская пицца."
+        },
+        "cost": 1500
+    },
+    {
+        "name": "gold",
+        "title": {
+            "english": "Golden",
+            "russian": "Золотая"
+        },
+        "description": {
+            "english": "Well, very expensive.",
+            "russian": "До-до-дорого пиздец."
+        },
+        "cost": 3000
+    },
+    {
+        "name": "bavarian",
+        "title": {
+            "english": "Bavarian",
+            "russian": "Баварская"
+        },
+        "description": {
+            "english": "ZHVP didn't come up with a description.",
+            "russian": "ЖВП не придумал описание."
+        },
+        "cost": 1500
+    },
+    {
+        "name": "amber",
+        "title": {
+            "english": "Amber",
+            "russian": "Янтарь"
+        },
+        "description": {
+            "english": "It was once the resin of a tree.",
+            "russian": "Когда-то она была смолой дерева."
+        },
+        "cost": -1,
+        "crystal": true
+    },
+    {
+        "name": "chicken",
+        "title": {
+            "english": "Chicken Ranch",
+            "russian": "Чикен ранч"
+        },
+        "description": {
+            "english": "6 pizzas and cola.",
+            "russian": "6 пицц и кола."
+        },
+        "cost": 900
+    },
+    {
+        "name": "chocolate",
+        "title": {
+            "english": "Chocolate",
+            "russian": "Шоколадная"
+        },
+        "description": {
+            "english": "Chocolate and pizza? Unusual combination.",
+            "russian": "Шоколад и пицца? Необычное сочетание."
+        },
+        "cost": 500
+    },
+    {
+        "name": "pickle",
+        "title": {
+            "english": "Pickles",
+            "russian": "Пикли"
+        },
+        "description": {
+            "english": "The creator\\'s dream.",
+            "russian": "Мечта создателя."
+        },
+        "cost": 300
+    },
+    {
+        "name": "wquartz",
+        "title": {
+            "english": "White quartz",
+            "russian": "Белый кварц"
+        },
+        "description": {
+            "english": "Turn the taste into a heavenly color!",
+            "russian": "Окрась вкус в небесный цвет!"
+        },
+        "cost": -1,
+        "crystal": true
+    },
+    {
+        "name": "bquartz",
+        "title": {
+            "english": "Black quartz",
+            "russian": "Чёрный кварц"
+        },
+        "description": {
+            "english": "Can lose it at night.",
+            "russian": "Ночью можно потерять."
+        },
+        "cost": -1,
+        "crystal": true
+    },
+    {
+        "name": "casino",
+        "title": {
+            "english": "Chip",
+            "russian": "Фишка"
+        },
+        "description": {
+            "english": "Warning! Highly addictive.",
+            "russian": "Внимание! Вызывает сильное привыкание."
+        },
+        "cost": 1000
+    },
+    {
+        "name": "iron",
+        "title": {
+            "english": "Iron",
+            "russian": "Железная"
+        },
+        "description": {
+            "english": "Guaranteed to increase the iron level in the body!",
+            "russian": "Гарантированно повысит уровень железа в организме!"
+        },
+        "cost": 2000,
+        "oxidized": true
+    },
+    {
+        "name": "copper",
+        "title": {
+            "english": "Copper",
+            "russian": "Медная"
+        },
+        "description": {
+            "english": "Great for attracting lightning... maybe.",
+            "russian": "Отлично подходит для привлечения молнии... Возможно."
+        },
+        "cost": 2000,
+        "oxidized": true
+    }
+]

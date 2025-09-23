@@ -14,7 +14,6 @@ const PWA: Partial<VitePWAOptions> = {
             { purpose: "maskable", sizes: "512x512", src: "public/icons/icon512_maskable.png", type: "image/png" },
             { purpose: "any", sizes: "512x512", src: "public/icons/icon512_rounded.png", type: "image/png" }
         ],
-        start_url: "/",
         orientation: "portrait",
         display: "standalone",
         name: "Pizza Game",
@@ -30,5 +29,5 @@ export default defineConfig({
             "@": path.resolve(__dirname, "src")
         }
     },
-    base: "/"
+    base: "/pizza-game-client"
 })

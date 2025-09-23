@@ -4,6 +4,7 @@ import { Scene } from "@/scene"
 import { GameScreen } from "@/game-screen"
 import { Language } from "@/language"
 import { MenuScene } from "./menu-scene"
+import { baseURL } from "@/constants"
 
 export class LoadingScene extends Scene {
     private readonly isShowImageListDataInConsole: boolean = false
@@ -30,7 +31,7 @@ export class LoadingScene extends Scene {
         const promisesList: Promise<string>[] = []
 
         for (const [imageName, imageSource] of Object.entries(imageListJSON.list)) {
-            promisesList.push(GameScreen.loadImage(imageName, `${imageListJSON.root}${imageSource}`))
+            promisesList.push(GameScreen.loadImage(imageName, `${baseURL}${imageListJSON.root}${imageSource}`))
         }
 
         Promise.allSettled(promisesList)

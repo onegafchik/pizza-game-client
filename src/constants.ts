@@ -2,6 +2,9 @@ import pizzasListJSON from "./config/pizzas-list.json"
 
 import type { PizzaName } from "./types"
 
+// @ts-ignore
+export const baseURL: string = import.meta.env.BASE_URL
+
 export const pizzaNamesList: PizzaName[] = pizzasListJSON.filter(({ crystal }) => !crystal).map(({ name }) => name)
 export const crystalPizzaNamesList: PizzaName[] = pizzasListJSON.filter(({ crystal }) => crystal).map(({ name }) => name)
 export const oxidizedPizzaNamesList: PizzaName[] = pizzasListJSON.filter(({ oxidized }) => oxidized).map(({ name }) => name)

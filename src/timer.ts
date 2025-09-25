@@ -57,8 +57,8 @@ export class Timer {
         this.deltaTime = currentTime - this.lastTime
 
         if (this.deltaTime >= this.duration) {
-            this.callback()
             this.isLooped ? this.run() : this.stop()
+            this.callback()
         }
     }
 }

@@ -76,7 +76,9 @@ export class LootGenerator {
                 return "big-money"
             case percent > 990 && percent <= 999:
                 return "totem"
-            case percent <= 1000:
+            case percent == 1000:
+                if (crystalPizzaNamesList.every((pizzaName: string) => GlobalStorage.hasPizza(pizzaName))) return "totem"
+
                 return "crystal-pizza"
             default: {
                 return "pizza"

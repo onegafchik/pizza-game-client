@@ -42,7 +42,10 @@
         "dead-heart": "gui/hearts/dead-heart.png",
 
         "ice-icon": "gui/icons/ice-icon.png",
-        "x-icon": "gui/icons/x-icon.png",
+        "x2-icon": "gui/icons/x2-icon.png",
+        "x3-icon": "gui/icons/x3-icon.png",
+        "x4-icon": "gui/icons/x4-icon.png",
+        "x5-icon": "gui/icons/x5-icon.png",
 
         "icon-line": "gui/icon-line.png",
         "trophy": "gui/trophy.png",
@@ -93,8 +96,8 @@
         "jade-pizza": "loot/crystal-pizzas/jade-pizza.png",
         "topaz-pizza": "loot/crystal-pizzas/topaz-pizza.png",
         "amber-pizza": "loot/crystal-pizzas/amber-pizza.png",
-        "wquartz-pizza": "loot/crystal-pizzas/wquartz-pizza.png",
-        "bquartz-pizza": "loot/crystal-pizzas/bquartz-pizza.png",
+        "quartz-pizza": "loot/crystal-pizzas/quartz-pizza.png",
+        "obsidian-pizza": "loot/crystal-pizzas/obsidian-pizza.png",
 
         "iron-pizza": "loot/oxidized-pizzas/iron-pizza-stage-0.png",
         "iron-pizza-stage-0": "loot/oxidized-pizzas/iron-pizza-stage-0.png",

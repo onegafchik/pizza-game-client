@@ -295,10 +295,10 @@
         "cost": 300
     },
     {
-        "name": "wquartz",
+        "name": "quartz",
         "title": {
-            "english": "White quartz",
-            "russian": "Белый кварц"
+            "english": "Quartz",
+            "russian": "Кварц"
         },
         "description": {
             "english": "Turn the taste into a heavenly color!",
@@ -308,10 +308,10 @@
         "crystal": true
     },
     {
-        "name": "bquartz",
+        "name": "obsidian",
         "title": {
-            "english": "Black quartz",
-            "russian": "Чёрный кварц"
+            "english": "Obsidian",
+            "russian": "Обсидиан"
         },
         "description": {
             "english": "Can lose it at night.",

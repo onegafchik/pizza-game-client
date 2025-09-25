@@ -7,7 +7,7 @@ const baseURL: string = "/pizza-game-client"
 const PWA: Partial<VitePWAOptions> = {
     registerType: "autoUpdate",
     workbox: {
-        globPatterns: ["**/*.{html,css,js,png}"]
+        globPatterns: ["**/*.{html,css,js,png,ttf}"]
     },
     manifest: {
         theme_color: "#ffffff",

@@ -73,7 +73,7 @@ export class LevelScene extends Scene {
                 if (this.player.detectWithAnotherEntity(loot)) {
                     switch (loot.getType) {
                         case "pizza": {
-                            this.player.getIsHasX ? GlobalStorage.addMoney(2) : GlobalStorage.addMoney(1)
+                            this.player.getIsHasX ? GlobalStorage.addMoney(this.player.getXLevel) : GlobalStorage.addMoney(1)
                             break
                         }
                         case "rotten-pizza": {

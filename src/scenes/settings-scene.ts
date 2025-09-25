@@ -8,6 +8,7 @@ import { AboutScene } from "./about-scene"
 import { Language } from "@/language"
 import { Vector } from "@/vector"
 import { links } from "@/constants"
+import { Game } from "@/main"
 
 export class SettingsScene extends Scene {
     private readonly buttonGroupPosition: Vector = new Vector(GameScreen.getWidth / 2 - 32, GameScreen.getHeight / 2 - 120)
@@ -59,6 +60,8 @@ export class SettingsScene extends Scene {
         GameScreen.setCurrentColor = "#ffffff"
         GameScreen.print(Language.getText("stickers"), this.telegramButton.getX + this.telegramButton.getWidth / 2, this.telegramButton.getY + this.telegramButton.getHeight - 4, 24, "center")
         GameScreen.print(Language.getText("devblog"), this.newsButton.getX + this.newsButton.getWidth / 2, this.newsButton.getY + this.newsButton.getHeight - 4, 24, "center")
+
+        GameScreen.print(`${Language.getText("version")} ${Game.getVersion}`, 4, GameScreen.getHeight - 20, 16)
     }
 
     private toggleFullscreen(): void {

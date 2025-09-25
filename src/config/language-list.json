@@ -27,6 +27,10 @@
         "english": "Select the control type",
         "russian": "Выберите тип управления"
     },
+    "change language": {
+        "english": "Select a language",
+        "russian": "Выберите язык"
+    },
     "exit from account": {
         "english": "Are you sure you want to log out of your account?",
         "russian": "Вы точно хотите выйти из аккаунта?"
@@ -46,5 +50,9 @@
     "testers": {
         "english": "Testers",
         "russian": "Тестеры"
+    },
+    "version": {
+        "english": "Version",
+        "russian": "Версия"
     }
 }

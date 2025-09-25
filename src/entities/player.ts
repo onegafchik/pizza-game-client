@@ -17,7 +17,7 @@ export class Player extends Entity {
     private readonly rottenTimer: Timer = new Timer(3000, () => (this.isRotten = false))
 
     private readonly freezeTimer: Timer = new Timer(4000, () => this.melt())
-    private readonly xTimer: Timer = new Timer(6000, () => this.disableX(), true)
+    private readonly xTimer: Timer = new Timer(16000, () => this.disableX(), true)
 
     private readonly defaultSpeed: number = 400
     private speed: number = this.defaultSpeed
@@ -145,9 +145,6 @@ export class Player extends Entity {
 
     public draw(_: number): void {
         this.isRotten ? GameScreen.drawImage("rotten-box", this.getX - 4, this.getY - 48, 72, 72) : GameScreen.drawImage(this.isFrozen ? "ice-box" : "box", this.getX - 4, this.getY - 48, 72, 72)
-
-        GameScreen.setCurrentColor = "red"
-        GameScreen.fill(this.getX, this.getY, this.getWidth, this.getHeight)
     }
 
     public drawHUD(_: number): void {

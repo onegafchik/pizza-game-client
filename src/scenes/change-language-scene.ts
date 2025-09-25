@@ -9,6 +9,8 @@ export class ChangeLanguageScene extends Scene {
     private englishButton: Button = new Button("britain-flag", () => this.changeLanguage("english"), GameScreen.getWidth / 2 + 4, GameScreen.getHeight / 2 - 32, 64, 64)
     private russianButton: Button = new Button("russia-flag", () => this.changeLanguage("russian"), this.englishButton.getX - 64 - 8, this.englishButton.getY, 64, 64)
 
+    private readonly changeText: string = Language.getText("change language")
+
     public init(): void {}
 
     public update(currentTime: number): void {
@@ -21,6 +23,9 @@ export class ChangeLanguageScene extends Scene {
 
         this.englishButton.draw(currentTime)
         this.russianButton.draw(currentTime)
+
+        GameScreen.setCurrentColor = "#ffffff"
+        GameScreen.print(this.changeText, GameScreen.getWidth / 2, GameScreen.getHeight / 2 - 72, 32, "center")
     }
 
     private changeLanguage(language: LanguageType): void {

@@ -29,7 +29,7 @@ export class LevelScene extends Scene {
     private readonly oxidizedTimer: Timer = new Timer(100000, () => (this.oxidizedStage = Math.min(this.oxidizedStage + 1, this.maxOxidizedStage)), true)
 
     private readonly smellAnimation: SpriteAnimation = new SpriteAnimation(150, [0, 1, 2, 3])
-    private readonly bigMoneyAnimation: SpriteAnimation = new SpriteAnimation(100, [0, 1, 2, 3, 4, 5, 6, 7])
+    private readonly bigMoneyAnimation: SpriteAnimation = new SpriteAnimation(150, [0, 1, 2, 3, 4, 5, 6, 7])
 
     private readonly pauseButton: Button = new Button("pause-button", () => this.pause(), GameScreen.getWidth - 32, 0, 32, 32)
     private readonly continueButton: Button = new Button("continue-button", () => this.unpause(), GameScreen.getWidth / 2 - 64 - 8, GameScreen.getHeight / 2 - 32, 64, 64)
@@ -85,7 +85,7 @@ export class LevelScene extends Scene {
                             !this.player.getIsRotten && this.player.freeze()
                             break
                         }
-                        case "x": {
+                        case "x-bonus": {
                             this.player.enableX()
                             break
                         }

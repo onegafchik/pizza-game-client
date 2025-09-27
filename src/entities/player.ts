@@ -17,7 +17,7 @@ export class Player extends Entity {
     private readonly rottenTimer: Timer = new Timer(3000, () => (this.isRotten = false))
 
     private readonly freezeTimer: Timer = new Timer(4000, () => this.melt())
-    private readonly xTimer: Timer = new Timer(16000, () => this.disableX(), true)
+    private readonly xTimer: Timer = new Timer(14000, () => this.disableX(), true)
 
     private readonly defaultSpeed: number = 400
     private speed: number = this.defaultSpeed

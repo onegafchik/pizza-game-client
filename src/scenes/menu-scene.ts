@@ -14,6 +14,7 @@ export class MenuScene extends Scene {
 
     private readonly settingsButton: Button = new Button("settings-button", () => this.stop(new SettingsScene()), GameScreen.getWidth - 32, 0, 32, 32)
     private readonly leaderboardButton: Button = new Button("leaderboard-button", () => this.stop(new LeaderboardScene()), GameScreen.getWidth - 64, 0, 32, 32)
+    // private readonly questionButton: Button = new Button("question-button", () => null, GameScreen.getWidth - 96, 0, 32, 32)
 
     private readonly startLevelClickableArea: Button = new Button("", () => this.getNextScene instanceof EmptyScene && this.stop(new LevelScene()), 0, 0, GameScreen.getWidth, GameScreen.getHeight)
 
@@ -23,8 +24,10 @@ export class MenuScene extends Scene {
 
     public update(currentTime: number): void {
         this.shopButton.update(currentTime)
+
         this.settingsButton.update(currentTime)
         this.leaderboardButton.update(currentTime)
+
         this.startLevelClickableArea.update(currentTime)
 
         if (!this.startLevelClickableArea.getIsEnable && !GameScreen.getCursorIsPressed) this.startLevelClickableArea.setIsEnable = true
@@ -40,6 +43,7 @@ export class MenuScene extends Scene {
         GameScreen.print(GlobalStorage.getMoney.toString(), 32, 24, 32)
 
         this.shopButton.draw(currentTime)
+
         this.settingsButton.draw(currentTime)
         this.leaderboardButton.draw(currentTime)
 

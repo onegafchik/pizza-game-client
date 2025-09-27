@@ -6,14 +6,12 @@ export class MultiLineText extends Widget {
 
     private text: string
     private fontSize: number
-    private color: string
 
-    public constructor(text: string, width: number, x: number, y: number, fontSize: number, color: string) {
+    public constructor(text: string, width: number, x: number, y: number, fontSize: number) {
         super(x, y, width, 0)
 
         this.text = text
         this.fontSize = fontSize
-        this.color = color
 
         this.create()
     }
@@ -24,10 +22,6 @@ export class MultiLineText extends Widget {
 
     public get getFontSize(): number {
         return this.fontSize
-    }
-
-    public get getColor(): string {
-        return this.color
     }
 
     public set setText(text: string) {
@@ -45,14 +39,8 @@ export class MultiLineText extends Widget {
         this.fontSize = size
     }
 
-    public set setColor(color: string) {
-        this.color = color
-    }
-
     public draw(_: number): void {
         if (!this.getIsVisible) return
-
-        GameScreen.setCurrentColor = this.color
         this.linesList.forEach((line: string, index: number) => GameScreen.print(line, this.getX, this.getY + index * this.fontSize * 0.7, this.fontSize))
     }
 

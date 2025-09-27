@@ -23,7 +23,7 @@ export class PizzaCard extends Widget {
 
         this.pizzaName = pizzaName
         this.title = title
-        this.description = new MultiLineText(descriptionText, GameScreen.getWidth / 2 + 32, 96, 192, 30, "#ffffff")
+        this.description = new MultiLineText(descriptionText, GameScreen.getWidth / 2 + 32, 96, 192, 30)
         this.cost = cost
 
         this.isCrystal = isCrystal

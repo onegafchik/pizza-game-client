@@ -71,7 +71,7 @@ export class LootGenerator {
             case percent > 900 && percent <= 960:
                 return "ice"
             case percent > 960 && percent <= 980:
-                return "x"
+                return "x-bonus"
             case percent > 980 && percent <= 990:
                 return "big-money"
             case percent > 990 && percent <= 999:

@@ -22,8 +22,9 @@ export class SettingsScene extends Scene {
 
     private readonly linkButtonGroupPosition: Vector = this.buttonGroupPosition.clone().add(0, 164)
 
-    private readonly telegramButton: Button = new Button("telegram-button", () => links.stickersTelegram && window.open(links.stickersTelegram), this.linkButtonGroupPosition.getX - 36, this.linkButtonGroupPosition.getY, 64, 64)
-    private readonly newsButton: Button = new Button("news-button", () => links.devblog && window.open(links.devblog), this.linkButtonGroupPosition.getX + 36, this.linkButtonGroupPosition.getY, 64, 64)
+    private readonly telegramButton: Button = new Button("telegram-button", () => links.stickersTelegram && window.open(links.stickersTelegram), this.linkButtonGroupPosition.getX - 72, this.linkButtonGroupPosition.getY, 64, 64)
+    private readonly newsButton: Button = new Button("news-button", () => links.devblog && window.open(links.devblog), this.linkButtonGroupPosition.getX, this.linkButtonGroupPosition.getY, 64, 64)
+    private readonly youtubeButton: Button = new Button("youtube-locked-button", () => null, this.linkButtonGroupPosition.getX + 72, this.linkButtonGroupPosition.getY, 64, 64)
 
     public init(): void {}
 
@@ -37,6 +38,7 @@ export class SettingsScene extends Scene {
 
         this.telegramButton.update(currentTime)
         this.newsButton.update(currentTime)
+        this.youtubeButton.update(currentTime)
     }
 
     public draw(currentTime: number): void {
@@ -56,10 +58,12 @@ export class SettingsScene extends Scene {
 
         this.telegramButton.draw(currentTime)
         this.newsButton.draw(currentTime)
+        this.youtubeButton.draw(currentTime)
 
         GameScreen.setCurrentColor = "#ffffff"
         GameScreen.print(Language.getText("stickers"), this.telegramButton.getX + this.telegramButton.getWidth / 2, this.telegramButton.getY + this.telegramButton.getHeight - 4, 24, "center")
         GameScreen.print(Language.getText("devblog"), this.newsButton.getX + this.newsButton.getWidth / 2, this.newsButton.getY + this.newsButton.getHeight - 4, 24, "center")
+        GameScreen.print(Language.getText("promo"), this.youtubeButton.getX + this.youtubeButton.getWidth / 2, this.youtubeButton.getY + this.youtubeButton.getHeight - 4, 24, "center")
 
         GameScreen.print(`${Language.getText("version")} ${Game.getVersion}`, 4, GameScreen.getHeight - 20, 16)
     }

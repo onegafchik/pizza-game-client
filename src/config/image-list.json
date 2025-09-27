@@ -1,8 +1,6 @@
 {
     "root": "/images/game/",
     "list": {
-        "giant-pizza": "giant-pizza.png",
-
         "background": "backgrounds/background.png",
         "background-without-sign": "backgrounds/background-without-sign.png",
         "leaderboard-background": "backgrounds/leaderboard-background.png",
@@ -22,14 +20,15 @@
         "disable-fullscreen-button": "gui/buttons/disable-fullscreen-button.png",
         "telegram-button": "gui/buttons/telegram-button.png",
         "youtube-button": "gui/buttons/youtube-button.png",
+        "youtube-locked-button": "gui/buttons/youtube-locked-button.png",
+        "controls-button": "gui/buttons/controls-button.png",
+        "news-button": "gui/buttons/news-button.png",
         "about-button": "gui/buttons/about-button.png",
         "github-button": "gui/buttons/github-button.png",
         "left-button": "gui/buttons/left-button.png",
         "right-button": "gui/buttons/right-button.png",
-        "controls-button": "gui/buttons/controls-button.png",
         "enable-checkbox-button": "gui/buttons/enable-checkbox-button.png",
         "disable-checkbox-button": "gui/buttons/disable-checkbox-button.png",
-        "news-button": "gui/buttons/news-button.png",
 
         "britain-flag": "gui/flags/britain-flag.png",
         "russia-flag": "gui/flags/russia-flag.png",
@@ -47,12 +46,12 @@
         "x4-icon": "gui/icons/x4-icon.png",
         "x5-icon": "gui/icons/x5-icon.png",
 
-        "icon-line": "gui/icon-line.png",
         "trophy": "gui/trophy.png",
         "money": "gui/money.png",
+        "icon-line": "gui/icon-line.png",
+        "group-line": "gui/group-line.png",
         "money-background": "gui/money-background.png",
         "small-money-background": "gui/small-money-background.png",
-        "group-line": "gui/group-line.png",
         "chosen-pizza": "gui/chosen-pizza.png",
         "locked-pizza": "gui/locked-pizza.png",
         "crystal": "gui/crystal.png",
@@ -66,7 +65,7 @@
         "cola": "loot/cola.png",
         "rotten-pizza": "loot/rotten-pizza.png",
         "ice": "loot/ice.png",
-        "x": "loot/x.png",
+        "x-bonus": "loot/x-bonus.png",
         "totem": "loot/totem.png",
         "big-money": "loot/big-money.png",
 

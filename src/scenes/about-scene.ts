@@ -11,8 +11,6 @@ export class AboutScene extends Scene {
 
     private readonly homeButton: Button = new Button("home-button", () => this.stop(new SettingsScene()), GameScreen.getWidth / 2 - 32, GameScreen.getHeight - 160, 64, 64)
 
-    private readonly testersPositionY: number = 160
-
     public init(): void {}
 
     public update(currentTime: number): void {
@@ -27,21 +25,10 @@ export class AboutScene extends Scene {
 
         GameScreen.setCurrentColor = "#ffffff"
         GameScreen.print(Language.getText("developer"), GameScreen.getWidth / 2, 8, 32, "center")
-        GameScreen.print("NEkTARIN (raro4ka)", GameScreen.getWidth / 2, 36, 24, "center")
+        GameScreen.print("NEkTARIN (raro4ka)", GameScreen.getWidth / 2, 40, 24, "center")
 
         this.githubButton.draw(currentTime)
         this.telegramButton.draw(currentTime)
-
-        GameScreen.print(Language.getText("testers"), GameScreen.getWidth / 2, 160, 32, "center")
-
-        GameScreen.drawImage("group-line", 24, this.testersPositionY - 16, 208, 12)
-
-        GameScreen.print("F1stashka", GameScreen.getWidth / 3, this.testersPositionY + 30, 24, "center")
-        GameScreen.print("SATANik", GameScreen.getWidth / 3, this.testersPositionY + 50, 24, "center")
-        GameScreen.print("Tima", GameScreen.getWidth / 3, this.testersPositionY + 70, 24, "center")
-        GameScreen.print("fomousey", (GameScreen.getWidth / 3) * 2, this.testersPositionY + 30, 24, "center")
-        GameScreen.print("danik", (GameScreen.getWidth / 3) * 2, this.testersPositionY + 50, 24, "center")
-        GameScreen.print("Tim4ek78", (GameScreen.getWidth / 3) * 2, this.testersPositionY + 70, 24, "center")
 
         this.homeButton.draw(currentTime)
     }

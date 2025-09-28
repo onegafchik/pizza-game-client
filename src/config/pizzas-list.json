@@ -357,5 +357,17 @@
         },
         "cost": 2000,
         "oxidized": true
+    },
+    {
+        "name": "donut",
+        "title": {
+            "english": "Donut",
+            "russian": "Пончик"
+        },
+        "description": {
+            "english": "A challenge to all pizza lovers.",
+            "russian": "Вызов всем любителям пиццы."
+        },
+        "cost": 2200
     }
 ]

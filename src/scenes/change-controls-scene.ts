@@ -24,7 +24,9 @@ export class ChangeControlsScene extends Scene {
         this.behindFingerButton.draw(currentTime)
 
         GameScreen.setCurrentColor = "#ffffff"
-        GameScreen.print(Language.getText("change controls"), GameScreen.getWidth / 2, 100, 32, "center")
+        GameScreen.print(Language.getText("changeControls"), GameScreen.getWidth / 2, 100, 32, "center")
+        GameScreen.print(Language.getText("halfScreen"), this.halfScreenButton.getX + this.halfScreenButton.getWidth / 2, this.halfScreenButton.getY + this.halfScreenButton.getHeight, 24, "center")
+        GameScreen.print(Language.getText("behindFinger"), this.behindFingerButton.getX + this.behindFingerButton.getWidth / 2, this.behindFingerButton.getY + this.behindFingerButton.getHeight, 24, "center")
     }
 
     private changeControls(type: ControlsType): void {

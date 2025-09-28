@@ -11,6 +11,7 @@ import { MenuScene } from "../menu-scene"
 import { Loot } from "@/entities/loot"
 import { getShortScore } from "@/utils"
 import { Pizza } from "@/entities/pizza"
+import { ButtonsRow } from "@/widgets/buttons-row"
 
 export class LevelScene extends Scene {
     private isPause: boolean = false
@@ -32,14 +33,21 @@ export class LevelScene extends Scene {
     private readonly bigMoneyAnimation: SpriteAnimation = new SpriteAnimation(150, [0, 1, 2, 3, 4, 5, 6, 7])
 
     private readonly pauseButton: Button = new Button("pause-button", () => this.pause(), GameScreen.getWidth - 32, 0, 32, 32)
-    private readonly continueButton: Button = new Button("continue-button", () => this.unpause(), GameScreen.getWidth / 2 - 64 - 8, GameScreen.getHeight / 2 - 32, 64, 64)
-    private readonly homeButton: Button = new Button("home-button", () => this.exit(), GameScreen.getWidth / 2 + 8, GameScreen.getHeight / 2 - 32, 64, 64)
+    private readonly pauseButtonsRow: ButtonsRow = new ButtonsRow(
+        [
+            ["continue-button", () => this.unpause()],
+            ["home-button", () => this.exit()]
+        ],
+        GameScreen.getWidth / 2,
+        GameScreen.getHeight / 2 - 32,
+        4,
+        64
+    )
 
     public init(): void {
-        this.player.setX = GameScreen.getWidth / 2 - this.player.getWidth / 2
+        this.pauseButtonsRow.hide()
 
-        this.continueButton.hide()
-        this.homeButton.hide()
+        this.player.setX = GameScreen.getWidth / 2 - this.player.getWidth / 2
 
         this.lootGenerator.run()
 
@@ -52,8 +60,7 @@ export class LevelScene extends Scene {
 
     public update(currentTime: number): void {
         this.pauseButton.update(currentTime)
-        this.continueButton.update(currentTime)
-        this.homeButton.update(currentTime)
+        this.pauseButtonsRow.update(currentTime)
 
         if (this.isPause) {
             this.lastTime === 0 && (this.lastTime = currentTime)
@@ -93,7 +100,7 @@ export class LevelScene extends Scene {
                             GlobalStorage.addMoney(100)
                             break
                         }
-                        case "totem": {
+                        case "shield": {
                             this.player.getIsHasShield && GlobalStorage.addMoney(30)
                             this.player.setIsShield = true
                             break
@@ -150,16 +157,14 @@ export class LevelScene extends Scene {
         }
 
         this.pauseButton.draw(currentTime)
-        this.continueButton.draw(currentTime)
-        this.homeButton.draw(currentTime)
+        this.pauseButtonsRow.draw(currentTime)
     }
 
     private pause(): void {
         this.isPause = true
 
         this.pauseButton.hide()
-        this.continueButton.show()
-        this.homeButton.show()
+        this.pauseButtonsRow.show()
     }
 
     private unpause(): void {
@@ -167,8 +172,7 @@ export class LevelScene extends Scene {
         this.lastTime = 0
 
         this.pauseButton.show()
-        this.continueButton.hide()
-        this.homeButton.hide()
+        this.pauseButtonsRow.hide()
     }
 
     private exit(): void {

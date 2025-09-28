@@ -12,6 +12,7 @@ export class Language {
 
     public static set setCurrentLanguage(language: LanguageType) {
         Language.currentLanguage = language
+        localStorage.setItem("language", Language.currentLanguage)
     }
 
     public static getText(phraseName: string): string {

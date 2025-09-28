@@ -7,6 +7,7 @@
         "leaderboard-locked-background": "backgrounds/leaderboard-locked-background.png",
         "shop-background": "backgrounds/shop-background.png",
 
+        "question-button": "gui/buttons/question-button.png",
         "leaderboard-button": "gui/buttons/leaderboard-button.png",
         "settings-button": "gui/buttons/settings-button.png",
         "shop-button": "gui/buttons/shop-button.png",
@@ -56,6 +57,7 @@
         "locked-pizza": "gui/locked-pizza.png",
         "crystal": "gui/crystal.png",
         "clocks": "gui/clocks.png",
+        "shop": "gui/shop.png",
         "no-wifi": "gui/no-wifi.png",
 
         "box": "player/box.png",
@@ -66,7 +68,7 @@
         "rotten-pizza": "loot/rotten-pizza.png",
         "ice": "loot/ice.png",
         "x-bonus": "loot/x-bonus.png",
-        "totem": "loot/totem.png",
+        "shield": "loot/shield.png",
         "big-money": "loot/big-money.png",
 
         "pepperoni-pizza": "loot/pizzas/pepperoni-pizza.png",
@@ -87,6 +89,7 @@
         "chocolate-pizza": "loot/pizzas/chocolate-pizza.png",
         "pickle-pizza": "loot/pizzas/pickle-pizza.png",
         "casino-pizza": "loot/pizzas/casino-pizza.png",
+        "donut-pizza": "loot/pizzas/donut-pizza.png",
 
         "diamond-pizza": "loot/crystal-pizzas/diamond-pizza.png",
         "ruby-pizza": "loot/crystal-pizzas/ruby-pizza.png",

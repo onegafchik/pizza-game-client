@@ -1,0 +1,131 @@
+[
+    [
+        {
+            "title": {
+                "english": "Player",
+                "russian": "Игрок"
+            },
+            "titleImage": "box",
+            "description": {
+                "english": "Player - box. Control it to collect as many coins as possible. There are only 3 lives per run, so beware of rotten pizzas.",
+                "russian": "Коробка - игрок. Управляй ей чтоб собрать как можно больше монет. Всего 3 жизни на один пробег, поэтому остерегайся гнилых пицц."
+            }
+        },
+        {
+            "title": {
+                "english": "Record",
+                "russian": "Рекорд"
+            },
+            "titleImage": "trophy",
+            "description": {
+                "english": "The result of the run. The longer you live, the bigger the record.",
+                "russian": "Результат пробега. Чем дольше живёшь, тем больше рекорд."
+            }
+        },
+        {
+            "title": {
+                "english": "Money",
+                "russian": "Монеты"
+            },
+            "titleImage": "money",
+            "description": {
+                "english": "They are used to buy pizzas. To get them, you need to collect pizzas and big coins.",
+                "russian": "Используются для покупки пицц. Чтобы их получить надо собирать пиццы и большие монеты."
+            }
+        }
+    ],
+    [
+        {
+            "title": {
+                "english": "Shop",
+                "russian": "Магазин"
+            },
+            "titleImage": "shop",
+            "description": {
+                "english": "A place where you can buy new pizzas and choose the one you want to play with.",
+                "russian": "Место, где можно приобрести новые пиццы и выбрать ту, с которой будешь играть."
+            }
+        },
+        {
+            "title": {
+                "english": "Crystal pizzas",
+                "russian": "Кристальные пиццы"
+            },
+            "titleImage": "crystal",
+            "description": {
+                "english": "Crystal pizzas cannot be bought. To purchase them, you need to pick them up at the level. Gives you 100 coins. The chance is 0.1%.",
+                "russian": "Кристальные пиццы нельзя купить. Чтобы их приобрести надо подобрать на уровне. Даёт 100 монет. Шанс 0.1%."
+            }
+        },
+        {
+            "title": {
+                "english": "Metal Pizzas",
+                "russian": "Металлические пиццы"
+            },
+            "titleImage": "clocks",
+            "description": {
+                "english": "Metal pizzas rust (oxidize) over time. They change their stage every 100 seconds. There are only 4.",
+                "russian": "Металлические пиццы со временем ржавеют (окисляются). Каждые 100 секунд меняют свою стадию. Всего 4."
+            }
+        }
+    ],
+    [
+        {
+            "title": {
+                "english": "Ice",
+                "russian": "Лёд"
+            },
+            "titleImage": "ice",
+            "description": {
+                "english": "Freezes the player, slowing him down 3 times. The box freezes for 4 seconds. The chance is 6%.",
+                "russian": "Замораживает игрока, замедляя его в 3 раза. Коробка замерзает на 4 секунды. Шанс 6%."
+            }
+        },
+        {
+            "title": {
+                "english": "Rotten pizza",
+                "russian": "Гнилая пицца"
+            },
+            "titleImage": "rotten-pizza",
+            "description": {
+                "english": "Rotten pizza deals damage to the player. It stinks. When selected, the rot effect appears, which gives immunity for 3 seconds. The chance is 20%.",
+                "russian": "Гнилая пицца наносит урон игроку. Воняет. При подборе появляется эффект гнили, который даёт иммунитет на 3 секунды. Шанс 20%."
+            }
+        },
+        {
+            "title": {
+                "english": "Big money",
+                "russian": "Большая монета"
+            },
+            "titleImage": "big-money",
+            "description": {
+                "english": "Gives you 100 coins. The chance is 1%.",
+                "russian": "Даёт 100 монет. Шанс 1%."
+            }
+        }
+    ],
+    [
+        {
+            "title": {
+                "english": "Shield",
+                "russian": "Щит"
+            },
+            "titleImage": "shield",
+            "description": {
+                "english": "Gives you a shield that's ready to take on a rotten pizza. Paints hearts in gold color. When raised again, it gives 30 coins. The chance is 1%.",
+                "russian": "Даёт щит, который готов принять на себя гнилую пиццу. Красит сердца в золотой цвет. При повторном поднятии даёт 30 монет. Шанс 1%."
+            }
+        },
+        {
+            "title": {
+                "english": "Bonus x2",
+                "russian": "Бонус х2"
+            },
+            "titleImage": "x-bonus",
+            "description": {
+                "english": "Doubles the amount of coins you receive from the pizza. You can increase the multiplier by picking up another similar bonus during its action. The maximum multiplier is 5. The action time is 14 seconds. The chance is 2%.",
+                "russian": "Удваивает количество получаемых монет с пиццы. Можно повысить множитель подобрав ещё один такой же бонус во время его действия. Максимальный множитель 5. Время действия 14 секунд. Шанс 2%."
+            }
+        }
+    ]
+]

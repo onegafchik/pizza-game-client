@@ -2,34 +2,39 @@ import { GameScreen } from "@/game-screen"
 import { Language } from "@/language"
 import { Scene } from "@/scene"
 import type { LanguageType } from "@/types"
-import { Button } from "@/widgets/button"
 import { MenuScene } from "./menu-scene"
+import { ButtonsRow } from "@/widgets/buttons-row"
 
 export class ChangeLanguageScene extends Scene {
-    private englishButton: Button = new Button("britain-flag", () => this.changeLanguage("english"), GameScreen.getWidth / 2 + 4, GameScreen.getHeight / 2 - 32, 64, 64)
-    private russianButton: Button = new Button("russia-flag", () => this.changeLanguage("russian"), this.englishButton.getX - 64 - 8, this.englishButton.getY, 64, 64)
+    private readonly buttonsRow: ButtonsRow = new ButtonsRow(
+        [
+            ["russia-flag", () => this.changeLanguage("russian")],
+            ["britain-flag", () => this.changeLanguage("english")]
+        ],
+        GameScreen.getWidth / 2,
+        GameScreen.getHeight / 2 - 32,
+        4,
+        64
+    )
 
     public init(): void {}
 
     public update(currentTime: number): void {
-        this.englishButton.update(currentTime)
-        this.russianButton.update(currentTime)
+        this.buttonsRow.update(currentTime)
     }
 
     public draw(currentTime: number): void {
         GameScreen.drawImage("background-without-sign", 0, 0, GameScreen.getWidth, GameScreen.getHeight)
 
-        this.englishButton.draw(currentTime)
-        this.russianButton.draw(currentTime)
+        this.buttonsRow.draw(currentTime)
 
         GameScreen.setCurrentColor = "#ffffff"
-        GameScreen.print("Русский", this.russianButton.getX + this.russianButton.getWidth / 2, this.russianButton.getY + this.russianButton.getHeight - 4, 24, "center")
-        GameScreen.print("English", this.englishButton.getX + this.englishButton.getWidth / 2, this.englishButton.getY + this.englishButton.getHeight - 4, 24, "center")
+        GameScreen.print("Русский", this.buttonsRow.getButtonsList[0].getX + 32, this.buttonsRow.getButtonsList[0].getY + 60, 24, "center")
+        GameScreen.print("English", this.buttonsRow.getButtonsList[1].getX + 32, this.buttonsRow.getButtonsList[1].getY + 60, 24, "center")
     }
 
     private changeLanguage(language: LanguageType): void {
         Language.setCurrentLanguage = language
-        localStorage.setItem("language", Language.getCurrentLanguage)
 
         this.stop(new MenuScene())
     }

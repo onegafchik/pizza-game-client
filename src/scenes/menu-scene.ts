@@ -8,13 +8,23 @@ import { LevelScene } from "./level/level-scene"
 import { getShortScore } from "@/utils"
 import { GlobalStorage } from "@/global-storage"
 import { Language } from "@/language"
+import { ButtonsRow } from "@/widgets/buttons-row"
+import { TipsScene } from "./tips/tips-scene"
 
 export class MenuScene extends Scene {
     private readonly shopButton: Button = new Button("shop-button", () => this.stop(new ShopScene()), 8, GameScreen.getHeight - 160, 64, 64)
 
-    private readonly settingsButton: Button = new Button("settings-button", () => this.stop(new SettingsScene()), GameScreen.getWidth - 32, 0, 32, 32)
-    private readonly leaderboardButton: Button = new Button("leaderboard-button", () => this.stop(new LeaderboardScene()), GameScreen.getWidth - 64, 0, 32, 32)
-    // private readonly questionButton: Button = new Button("question-button", () => null, GameScreen.getWidth - 96, 0, 32, 32)
+    private readonly topButtonsRow: ButtonsRow = new ButtonsRow(
+        [
+            ["question-button", () => this.stop(new TipsScene())],
+            ["leaderboard-button", () => this.stop(new LeaderboardScene())],
+            ["settings-button", () => this.stop(new SettingsScene())]
+        ],
+        GameScreen.getWidth - 48,
+        0,
+        0,
+        32
+    )
 
     private readonly startLevelClickableArea: Button = new Button("", () => this.getNextScene instanceof EmptyScene && this.stop(new LevelScene()), 0, 0, GameScreen.getWidth, GameScreen.getHeight)
 
@@ -24,12 +34,9 @@ export class MenuScene extends Scene {
 
     public update(currentTime: number): void {
         this.shopButton.update(currentTime)
-
-        this.settingsButton.update(currentTime)
-        this.leaderboardButton.update(currentTime)
+        this.topButtonsRow.update(currentTime)
 
         this.startLevelClickableArea.update(currentTime)
-
         if (!this.startLevelClickableArea.getIsEnable && !GameScreen.getCursorIsPressed) this.startLevelClickableArea.setIsEnable = true
     }
 
@@ -43,9 +50,7 @@ export class MenuScene extends Scene {
         GameScreen.print(GlobalStorage.getMoney.toString(), 32, 24, 32)
 
         this.shopButton.draw(currentTime)
-
-        this.settingsButton.draw(currentTime)
-        this.leaderboardButton.draw(currentTime)
+        this.topButtonsRow.draw(currentTime)
 
         GameScreen.setCurrentColor = "#ffffff"
         GameScreen.print(Language.getText("click"), GameScreen.getWidth / 2, GameScreen.getHeight / 2 - 56, 40, "center")

@@ -14,5 +14,6 @@ export const links: Record<string, string> = {
     telegram: "https://t.me/onegaf",
     github: "https://github.com/onegafchik",
     stickersTelegram: "https://t.me/addstickers/pizzagame",
-    devblog: "https://nektarin.itch.io/pizza-game/devlog"
+    devblog: "https://nektarin.itch.io/pizza-game/devlog",
+    promo: ""
 }

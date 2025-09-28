@@ -5,6 +5,8 @@ import { GameScreen } from "@/game-screen"
 import { Language } from "@/language"
 import { MenuScene } from "./menu-scene"
 import { baseURL } from "@/constants"
+import { getIsLanguageTypeGuard } from "@/types"
+import { ChangeLanguageScene } from "./change-language-scene"
 
 export class LoadingScene extends Scene {
     private readonly isShowImageListDataInConsole: boolean = false
@@ -16,7 +18,7 @@ export class LoadingScene extends Scene {
     }
 
     public update(_: number): void {
-        this.isImageListLoaded && this.stop(new MenuScene())
+        this.isImageListLoaded && this.stop(getIsLanguageTypeGuard(localStorage.getItem("language")) ? new MenuScene() : new ChangeLanguageScene())
     }
 
     public draw(_: number): void {
@@ -24,7 +26,7 @@ export class LoadingScene extends Scene {
         GameScreen.fill(0, 0, GameScreen.getWidth, GameScreen.getHeight)
 
         GameScreen.setCurrentColor = "#ffffff"
-        !this.isImageListLoaded && GameScreen.print(Language.getText("loading resources"), GameScreen.getWidth / 2, GameScreen.getHeight / 2 - 20, 30, "center")
+        !this.isImageListLoaded && GameScreen.print(Language.getText("loadingResources"), GameScreen.getWidth / 2, GameScreen.getHeight / 2 - 20, 30, "center")
     }
 
     private loadImageList(): void {

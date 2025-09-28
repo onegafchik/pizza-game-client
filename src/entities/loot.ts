@@ -1,7 +1,7 @@
 import { Entity } from "@/entity"
 import { GameScreen } from "@/game-screen"
 
-export type LootType = "pizza" | "rotten-pizza" | "ice" | "x-bonus" | "big-money" | "totem" | "crystal-pizza"
+export type LootType = "pizza" | "rotten-pizza" | "ice" | "x-bonus" | "big-money" | "shield" | "crystal-pizza"
 
 export class Loot extends Entity {
     private readonly type: LootType

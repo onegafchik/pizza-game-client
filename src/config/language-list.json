@@ -3,19 +3,11 @@
         "english": "Click!",
         "russian": "Кликни!"
     },
-    "loading resources": {
+    "loadingResources": {
         "english": "Loading resources...",
         "russian": "Загрузка ресурсов..."
     },
-    "loading data": {
-        "english": "Loading data...",
-        "russian": "Загрузка данных..."
-    },
-    "data load error": {
-        "english": "Data load error",
-        "russian": "Ошибка загрузки данных"
-    },
-    "random mode": {
+    "randomMode": {
         "english": "Random pizzas",
         "russian": "Случайные пиццы"
     },
@@ -23,13 +15,17 @@
         "english": "Pause",
         "russian": "Пауза"
     },
-    "change controls": {
+    "changeControls": {
         "english": "Select the control type",
         "russian": "Выберите тип управления"
     },
-    "exit from account": {
-        "english": "Are you sure you want to log out of your account?",
-        "russian": "Вы точно хотите выйти из аккаунта?"
+    "halfScreen": {
+        "english": "Half of the screen",
+        "russian": "Половина экрана"
+    },
+    "behindFinger": {
+        "english": "Behind the finger",
+        "russian": "За пальцем"
     },
     "stickers": {
         "english": "Stickers",

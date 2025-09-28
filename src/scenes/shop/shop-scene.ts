@@ -78,7 +78,7 @@ export class ShopScene extends Scene {
         this.randomModeCheckbox.setImageName = `${GlobalStorage.getIsRandomModeEnabled ? "enable" : "disable"}-checkbox-button`
         this.randomModeCheckbox.draw(currentTime)
         GameScreen.setCurrentColor = "#ffffff"
-        this.randomModeCheckbox.getIsVisible && GameScreen.print(Language.getText("random mode"), this.randomModeCheckbox.getX + 34, this.randomModeCheckbox.getY + 4, 24)
+        this.randomModeCheckbox.getIsVisible && GameScreen.print(Language.getText("randomMode"), this.randomModeCheckbox.getX + 34, this.randomModeCheckbox.getY + 4, 24)
 
         this.homeButton.draw(currentTime)
     }

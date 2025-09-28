@@ -4,7 +4,7 @@ import { LoadingScene } from "./scenes/loading-scene"
 import { Timer } from "./timer"
 
 export class Game {
-    private static readonly version: string = "1.8.3"
+    private static readonly version: string = "1.8.4"
 
     private static loopID?: number
 

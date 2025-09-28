@@ -58,5 +58,7 @@ export class MultiLineText extends Widget {
         })
 
         this.linesList = [...linesList, line]
+
+        this.setHeight = Math.ceil(this.linesList.length * this.fontSize * 0.8)
     }
 }

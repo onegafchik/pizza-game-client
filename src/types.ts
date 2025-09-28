@@ -1,7 +1,10 @@
 import pizzasListJSON from "./config/pizzas-list.json"
+import tipsListJSON from "./config/tips-list.json"
 
 export type PizzaName = (typeof pizzasListJSON)[number]["name"]
 export type PizzaJSON = (typeof pizzasListJSON)[number]
+
+export type TipJSON = (typeof tipsListJSON)[number]
 
 export type LanguageType = "english" | "russian"
 

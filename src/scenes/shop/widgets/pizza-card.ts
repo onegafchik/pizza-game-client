@@ -53,6 +53,8 @@ export class PizzaCard extends Widget {
     }
 
     public update(currentTime: number): void {
+        super.update(currentTime)
+
         this.buyButton?.update(currentTime)
     }
 

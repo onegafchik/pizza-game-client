@@ -2,7 +2,7 @@ import { crystalPizzaNamesList, pizzasNamesList } from "@/constants"
 import { Loot, type LootType } from "@/entities/loot"
 import { Pizza } from "@/entities/pizza"
 import { GlobalStorage } from "@/global-storage"
-import { random } from "@/math"
+import { random, range } from "@/math"
 import { Timer } from "@/timer"
 import type { PizzaName } from "@/types"
 
@@ -55,7 +55,7 @@ export class LootGenerator {
         const lootType: LootType = this.getRandomLootType()
         const x: number = random(0, 192)
 
-        if (lootType === "pizza") this.lootList = [...this.lootList, new Pizza(GlobalStorage.getIsRandomModeEnabled ? this.getPizzaName(pizzasNamesList, false) : GlobalStorage.getChosenPizza, x, -64)]
+        if (lootType === "pizza") this.lootList = [...this.lootList, new Pizza(GlobalStorage.getLikedPizzaNamesList[random(0, GlobalStorage.getLikedPizzaNamesList.length - 1)], x, -64)]
         else if (lootType === "crystal-pizza") this.lootList = [...this.lootList, new Pizza(this.getPizzaName(crystalPizzaNamesList, true), x, -64, true)]
         else this.lootList = [...this.lootList, new Loot(lootType, x, -64)]
     }

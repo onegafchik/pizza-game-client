@@ -8,7 +8,7 @@ export class TipBody extends Widget {
     private readonly description: MultiLineText
 
     public constructor(title: string, titleImage: string, description: string) {
-        super(28, 0, GameScreen.getWidth - 56, 0)
+        super(40, 0, GameScreen.getWidth - 80, 0)
 
         this.title = title
         this.titleImage = titleImage

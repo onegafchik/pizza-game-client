@@ -16,7 +16,8 @@ export class PizzaCard extends Widget {
     private readonly isCrystal: boolean
     private readonly isOxidized: boolean
 
-    private readonly buyButton: Button = new Button("", () => GlobalStorage.buyPizza(this.pizzaName, this.cost), 12, 264, 72, 32)
+    private readonly buyButton: Button = new Button("", () => this.buy(), 12, 264, 72, 32)
+    private readonly likeButton: Button = new Button(`enable-like-button`, () => this.toggleLikedPizza(), 20, 264, 56, 40)
 
     public constructor(pizzaName: PizzaName, title: string, descriptionText: string, cost: number, isCrystal: boolean = false, isOxidized: boolean = false) {
         super(0, 0, 0, 0)
@@ -29,7 +30,10 @@ export class PizzaCard extends Widget {
         this.isCrystal = isCrystal
         this.isOxidized = isOxidized
 
-        this.isCrystal && this.buyButton.hide()
+        this.buyButton.hide()
+
+        this.cost >= 0 && !GlobalStorage.hasPizza(this.pizzaName) && !this.isCrystal && this.buyButton.show()
+        !GlobalStorage.hasPizza(this.pizzaName) && this.likeButton.hide()
     }
 
     public get getPizzaName(): PizzaName {
@@ -55,7 +59,8 @@ export class PizzaCard extends Widget {
     public update(currentTime: number): void {
         super.update(currentTime)
 
-        this.buyButton?.update(currentTime)
+        this.buyButton.update(currentTime)
+        this.likeButton.update(currentTime)
     }
 
     public draw(currentTime: number): void {
@@ -68,11 +73,25 @@ export class PizzaCard extends Widget {
         GameScreen.print(this.title, 96, 160, 40)
         this.description.draw(currentTime)
 
-        if (this.cost >= 0 && !GlobalStorage.hasPizza(this.pizzaName) && this.buyButton.getIsVisible) {
+        if (this.buyButton.getIsEnable) {
             GameScreen.drawImage("small-money-background", 12, 264, 72, 32)
             GameScreen.drawImage("money", 12, 264, 32, 32)
             GameScreen.setCurrentColor = "#ffffff"
             GameScreen.print(getShortScore(this.cost), 40, 263, 32)
+        } else {
+            this.likeButton.setImageName = `${GlobalStorage.getIsLikedPizza(this.pizzaName) ? "enable" : "disable"}-like-button`
+            this.likeButton.draw(currentTime)
         }
+    }
+
+    private buy(): void {
+        if (GlobalStorage.buyPizza(this.pizzaName, this.cost)) {
+            this.buyButton.hide()
+            this.likeButton.show()
+        }
+    }
+
+    private toggleLikedPizza(): void {
+        GlobalStorage.getIsLikedPizza(this.pizzaName) ? GlobalStorage.unlikePizza(this.pizzaName) : GlobalStorage.likePizza(this.pizzaName)
     }
 }

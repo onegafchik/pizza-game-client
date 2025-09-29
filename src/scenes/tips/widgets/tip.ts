@@ -20,7 +20,7 @@ export class Tip extends Widget {
     public draw(currentTime: number): void {
         this.tipBodiesList.forEach((tipBody: TipBody, index) => {
             tipBody.draw(currentTime)
-            index < this.tipBodiesList.length - 1 && GameScreen.drawImage("group-line", 24, tipBody.getY + tipBody.getHeight + 4, 208, 12)
+            index < this.tipBodiesList.length - 1 && GameScreen.drawImage("tip-line", 36, tipBody.getY + tipBody.getHeight + 4, 184, 12)
         })
     }
 }

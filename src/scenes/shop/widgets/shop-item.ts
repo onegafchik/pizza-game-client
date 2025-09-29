@@ -23,16 +23,10 @@ export class ShopItem extends Button {
         return this.pizzaCard
     }
 
-    public update(currentTime: number): void {
-        super.update(currentTime)
-
-        !GlobalStorage.getIsRandomModeEnabled && this.getIsEnable && this.getIsDoubleClicked && GlobalStorage.choosePizza(this.pizzaName)
-    }
-
     public draw(currentTime: number): void {
         super.draw(currentTime)
 
         !GlobalStorage.hasPizza(this.pizzaName) && GameScreen.drawImage("locked-pizza", this.getX, this.getY, this.getWidth, this.getHeight)
-        !GlobalStorage.getIsRandomModeEnabled && GlobalStorage.getChosenPizza === this.pizzaName && GameScreen.drawImage("chosen-pizza", this.getX, this.getY, this.getWidth, this.getHeight)
+        GlobalStorage.getIsLikedPizza(this.pizzaName) && GameScreen.drawImage("liked-pizza", this.getX, this.getY, this.getWidth, this.getHeight)
     }
 }

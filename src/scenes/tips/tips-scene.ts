@@ -11,8 +11,8 @@ export class TipsScene extends Scene {
     private tipsList: Tip[]
     private currentTipIndex: number = 0
 
-    private readonly leftButton: Button = new Button("left-button", () => this.left(), 0, 156, 24, 64)
-    private readonly rightButton: Button = new Button("right-button", () => this.right(), GameScreen.getWidth - 24, 156, 24, 64)
+    private readonly leftButton: Button = new Button("left-button", () => this.left(), 0, 160, 24, 64)
+    private readonly rightButton: Button = new Button("right-button", () => this.right(), GameScreen.getWidth - 24, 160, 24, 64)
 
     private readonly homeButton: Button = new Button("home-button", () => this.stop(new MenuScene()), GameScreen.getWidth / 2 - 32, GameScreen.getHeight - 160, 64, 64)
 
@@ -33,6 +33,9 @@ export class TipsScene extends Scene {
 
     public draw(currentTime: number): void {
         GameScreen.drawImage("background-without-sign", 0, 0, GameScreen.getWidth, GameScreen.getHeight)
+
+        GameScreen.drawImage("tip-edge", 24, 32, 12, 320)
+        GameScreen.drawImage("tip-edge", GameScreen.getWidth - 36, 32, 12, 320)
 
         this.tipsList[this.currentTipIndex].draw(currentTime)
 

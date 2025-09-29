@@ -7,10 +7,6 @@
         "english": "Loading resources...",
         "russian": "Загрузка ресурсов..."
     },
-    "randomMode": {
-        "english": "Random pizzas",
-        "russian": "Случайные пиццы"
-    },
     "pause": {
         "english": "Pause",
         "russian": "Пауза"

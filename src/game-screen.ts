@@ -3,8 +3,6 @@ interface GameCursor {
     y: number
     isPressed: boolean
     isClicked: boolean
-    isDoubleClicked: boolean
-    lastTimeOfClick: number
 }
 
 export class GameScreen {
@@ -20,9 +18,7 @@ export class GameScreen {
         x: -1,
         y: -1,
         isPressed: false,
-        isClicked: false,
-        isDoubleClicked: false,
-        lastTimeOfClick: 0
+        isClicked: false
     }
 
     private static readonly keysList: Record<string, boolean> = {}
@@ -58,10 +54,6 @@ export class GameScreen {
         return GameScreen.cursor.isClicked
     }
 
-    public static get getCursorIsDoubleClicked(): boolean {
-        return GameScreen.cursor.isDoubleClicked
-    }
-
     public static get getCurrentColor(): string {
         return typeof GameScreen.context.fillStyle === "string" ? GameScreen.context.fillStyle : "#000000"
     }
@@ -94,7 +86,6 @@ export class GameScreen {
         GameScreen.canvasElement.addEventListener("wheel", (event: WheelEvent) => event.preventDefault())
 
         GameScreen.canvasElement.addEventListener("click", GameScreen.handleMouseEvent)
-        GameScreen.canvasElement.addEventListener("dblclick", GameScreen.handleMouseEvent)
 
         GameScreen.canvasElement.addEventListener("mousedown", GameScreen.handleMouseEvent)
         GameScreen.canvasElement.addEventListener("mousemove", GameScreen.handleMouseEvent)
@@ -114,7 +105,6 @@ export class GameScreen {
 
     public static updateCursor(): void {
         GameScreen.cursor.isClicked = false
-        GameScreen.cursor.isDoubleClicked = false
     }
 
     public static getIsKeyPressed(key: string): boolean {
@@ -202,7 +192,6 @@ export class GameScreen {
         GameScreen.cursor.y = Math.trunc(event.pageY / GameScreen.scaleY)
 
         if (event.type === "click") GameScreen.cursor.isClicked = true
-        if (event.type === "dblclick") GameScreen.cursor.isDoubleClicked = true
         else if (event.type === "mousedown") GameScreen.cursor.isPressed = true
         else if (event.type === "mouseup") GameScreen.cursor.isPressed = false
     }
@@ -217,11 +206,6 @@ export class GameScreen {
 
         if (event.type === "touchstart") GameScreen.cursor.isPressed = true
         else if (event.type === "touchend") {
-            if (performance.now() - GameScreen.cursor.lastTimeOfClick <= 500) {
-                GameScreen.cursor.isDoubleClicked = true
-                GameScreen.cursor.lastTimeOfClick = 0
-            } else GameScreen.cursor.lastTimeOfClick = performance.now()
-
             GameScreen.cursor.isClicked = true
             GameScreen.cursor.isPressed = event.touches.length > 0
         }

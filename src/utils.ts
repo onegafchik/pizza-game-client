@@ -6,7 +6,3 @@ export function getNumberFromLocalStorage(key: string): number {
     const data: number = Number(localStorage.getItem(key))
     return Number.isFinite(data) ? data : 0
 }
-
-export function getBooleanFromLocalStorage(key: string): boolean {
-    return localStorage.getItem(key) === "true"
-}

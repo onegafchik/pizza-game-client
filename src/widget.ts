@@ -31,10 +31,6 @@ export class Widget extends Entity {
         return this.isIntersected && GameScreen.getCursorIsClicked
     }
 
-    public get getIsDoubleClicked(): boolean {
-        return this.isIntersected && GameScreen.getCursorIsDoubleClicked
-    }
-
     public set setIsEnable(value: boolean) {
         this.isEnable = value
     }

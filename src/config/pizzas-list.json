@@ -369,5 +369,17 @@
             "russian": "Вызов всем любителям пиццы."
         },
         "cost": 2200
+    },
+    {
+        "name": "burger",
+        "title": {
+            "english": "Burger pizza",
+            "russian": "Бургер пицца"
+        },
+        "description": {
+            "english": "A culinary hybrid that gives double pleasure.",
+            "russian": "Кулинарный гибрид, который дарит двойное удовольствие."
+        },
+        "cost": 700
     }
 ]

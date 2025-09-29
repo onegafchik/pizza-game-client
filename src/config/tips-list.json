@@ -16,7 +16,7 @@
                 "english": "Record",
                 "russian": "Рекорд"
             },
-            "titleImage": "trophy",
+            "titleImage": "tip-trophy",
             "description": {
                 "english": "The result of the run. The longer you live, the bigger the record.",
                 "russian": "Результат пробега. Чем дольше живёшь, тем больше рекорд."
@@ -27,7 +27,7 @@
                 "english": "Money",
                 "russian": "Монеты"
             },
-            "titleImage": "money",
+            "titleImage": "tip-money",
             "description": {
                 "english": "They are used to buy pizzas. To get them, you need to collect pizzas and big coins.",
                 "russian": "Используются для покупки пицц. Чтобы их получить надо собирать пиццы и большие монеты."
@@ -49,7 +49,7 @@
         {
             "title": {
                 "english": "Crystal pizzas",
-                "russian": "Кристальные пиццы"
+                "russian": "Кристал. пиццы"
             },
             "titleImage": "crystal",
             "description": {
@@ -60,7 +60,7 @@
         {
             "title": {
                 "english": "Metal Pizzas",
-                "russian": "Металлические пиццы"
+                "russian": "Металл. пиццы"
             },
             "titleImage": "clocks",
             "description": {
@@ -124,7 +124,7 @@
             "titleImage": "x-bonus",
             "description": {
                 "english": "Doubles the amount of coins you receive from the pizza. You can increase the multiplier by picking up another similar bonus during its action. The maximum multiplier is 5. The action time is 14 seconds. The chance is 2%.",
-                "russian": "Удваивает количество получаемых монет с пиццы. Можно повысить множитель подобрав ещё один такой же бонус во время его действия. Максимальный множитель 5. Время действия 14 секунд. Шанс 2%."
+                "russian": "Удваивает количество получаемых монет с пиццы. Можно повысить множитель подобрав ещё один такой же бонус во время его действия. Макс. множитель 5. Время действия 14 секунд. Шанс 2%."
             }
         }
     ]

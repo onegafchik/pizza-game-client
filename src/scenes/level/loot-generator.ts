@@ -1,8 +1,8 @@
-import { crystalPizzaNamesList, pizzasNamesList } from "@/constants"
+import { crystalPizzaNamesList } from "@/constants"
 import { Loot, type LootType } from "@/entities/loot"
 import { Pizza } from "@/entities/pizza"
 import { GlobalStorage } from "@/global-storage"
-import { random, range } from "@/math"
+import { random } from "@/math"
 import { Timer } from "@/timer"
 import type { PizzaName } from "@/types"
 

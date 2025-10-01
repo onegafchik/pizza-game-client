@@ -30,6 +30,8 @@
         "right-button": "gui/buttons/right-button.png",
         "enable-like-button": "gui/buttons/enable-like-button.png",
         "disable-like-button": "gui/buttons/disable-like-button.png",
+        "like-all-button": "gui/buttons/like-all-button.png",
+        "unlike-all-button": "gui/buttons/unlike-all-button.png",
 
         "britain-flag": "gui/flags/britain-flag.png",
         "russia-flag": "gui/flags/russia-flag.png",
@@ -57,7 +59,7 @@
         "locked-pizza": "gui/shop/locked-pizza.png",
         "crystal": "gui/shop/crystal.png",
         "clocks": "gui/shop/clocks.png",
-        "tip-edge": "gui/tip/tip-edge.png",
+        "tip-frame": "gui/tip/tip-frame.png",
         "tip-line": "gui/tip/tip-line.png",
         "shop": "gui/tip/shop.png",
         "tip-money": "gui/tip/tip-money.png",
@@ -95,6 +97,11 @@
         "casino-pizza": "loot/pizzas/casino-pizza.png",
         "donut-pizza": "loot/pizzas/donut-pizza.png",
         "burger-pizza": "loot/pizzas/burger-pizza.png",
+        "blackberry-pizza": "loot/pizzas/blackberry-pizza.png",
+        "strawberry-pizza": "loot/pizzas/strawberry-pizza.png",
+        "blueberry-pizza": "loot/pizzas/blueberry-pizza.png",
+        "bilberry-pizza": "loot/pizzas/bilberry-pizza.png",
+        "cherry-pizza": "loot/pizzas/cherry-pizza.png",
 
         "diamond-pizza": "loot/crystal-pizzas/diamond-pizza.png",
         "ruby-pizza": "loot/crystal-pizzas/ruby-pizza.png",
@@ -105,6 +112,7 @@
         "amber-pizza": "loot/crystal-pizzas/amber-pizza.png",
         "quartz-pizza": "loot/crystal-pizzas/quartz-pizza.png",
         "obsidian-pizza": "loot/crystal-pizzas/obsidian-pizza.png",
+        "garnet-pizza": "loot/crystal-pizzas/garnet-pizza.png",
 
         "iron-pizza": "loot/oxidized-pizzas/iron-pizza-stage-0.png",
         "iron-pizza-stage-0": "loot/oxidized-pizzas/iron-pizza-stage-0.png",

@@ -8,7 +8,8 @@ import { GlobalStorage } from "@/global-storage"
 import { Language } from "@/language"
 import { ShopItem } from "./widgets/shop-item"
 import { PizzaCard } from "./widgets/pizza-card"
-import type { PizzaJSON } from "@/types"
+import type { PizzaJSON, PizzaName } from "@/types"
+import { pizzasNamesList } from "@/constants"
 
 export class ShopScene extends Scene {
     private itemsList: ShopItem[] = []
@@ -23,6 +24,9 @@ export class ShopScene extends Scene {
 
     private readonly leftButton: Button = new Button("left-button", () => this.left(), 0, GameScreen.getHeight - 160, 24, 64)
     private readonly rightButton: Button = new Button("right-button", () => this.right(), GameScreen.getWidth - 24, GameScreen.getHeight - 160, 24, 64)
+
+    private readonly likeAllPizzasButton: Button = new Button("like-all-button", () => this.likeAllPizzas(), 52, GameScreen.getHeight - 48, 72, 40)
+    private readonly unlikeAllPizzasButton: Button = new Button("unlike-all-button", () => this.unlikeAllPizzas(), 132, GameScreen.getHeight - 48, 72, 40)
 
     public constructor() {
         super()
@@ -41,6 +45,11 @@ export class ShopScene extends Scene {
 
         this.rowsCount = Math.floor((this.itemsList.length - 1) / 3)
         this.updateRow()
+
+        if (!GlobalStorage.getIsPizzasMoreThanTwo) {
+            this.likeAllPizzasButton.hide()
+            this.unlikeAllPizzasButton.hide()
+        }
     }
 
     public init(): void {}
@@ -50,6 +59,9 @@ export class ShopScene extends Scene {
 
         this.leftButton.update(currentTime)
         this.rightButton.update(currentTime)
+
+        this.likeAllPizzasButton.update(currentTime)
+        this.unlikeAllPizzasButton.update(currentTime)
 
         this.currentRow.forEach((item?: ShopItem) => item?.update(currentTime))
         this.currentPizzaCard?.update(currentTime)
@@ -63,6 +75,9 @@ export class ShopScene extends Scene {
 
         this.leftButton.draw(currentTime)
         this.rightButton.draw(currentTime)
+
+        this.likeAllPizzasButton.draw(currentTime)
+        this.unlikeAllPizzasButton.draw(currentTime)
 
         GameScreen.drawImage("money-background", 8, 8, 88, 32)
         GameScreen.drawImage("money", 8, 8, 32, 32)
@@ -84,5 +99,15 @@ export class ShopScene extends Scene {
 
     private updateRow(): void {
         this.currentRow = [this.itemsList[this.currentRowIndex * 3], this.itemsList[this.currentRowIndex * 3 + 1], this.itemsList[this.currentRowIndex * 3 + 2]]
+    }
+
+    private likeAllPizzas(): void {
+        pizzasNamesList.forEach((name: PizzaName) => GlobalStorage.likePizza(name))
+    }
+
+    private unlikeAllPizzas(): void {
+        if (this.currentPizzaCard) {
+            pizzasNamesList.filter((name: PizzaName) => name !== this.currentPizzaCard!.getPizzaName).forEach((name: PizzaName) => GlobalStorage.unlikePizza(name))
+        }
     }
 }

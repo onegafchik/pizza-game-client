@@ -23,6 +23,10 @@ export class GlobalStorage {
         return GlobalStorage.highScore
     }
 
+    public static get getIsPizzasMoreThanTwo(): boolean {
+        return Object.keys(GlobalStorage.pizzasList).length > 1
+    }
+
     public static get getControlsType(): ControlsType {
         return GlobalStorage.controlsType
     }

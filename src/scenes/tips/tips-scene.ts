@@ -34,8 +34,7 @@ export class TipsScene extends Scene {
     public draw(currentTime: number): void {
         GameScreen.drawImage("background-without-sign", 0, 0, GameScreen.getWidth, GameScreen.getHeight)
 
-        GameScreen.drawImage("tip-edge", 24, 32, 12, 320)
-        GameScreen.drawImage("tip-edge", GameScreen.getWidth - 36, 32, 12, 320)
+        GameScreen.drawImage("tip-frame", 24, 24, 208, 344)
 
         this.tipsList[this.currentTipIndex].draw(currentTime)
 

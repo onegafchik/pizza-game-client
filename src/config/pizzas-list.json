@@ -381,5 +381,78 @@
             "russian": "Кулинарный гибрид, который дарит двойное удовольствие."
         },
         "cost": 700
+    },
+    {
+        "name": "blackberry",
+        "title": {
+            "english": "Blackberry",
+            "russian": "Ежевика"
+        },
+        "description": {
+            "english": "There's a little wildness in every bite.",
+            "russian": "Немного дикости в каждом укусе."
+        },
+        "cost": 400
+    },
+    {
+        "name": "strawberry",
+        "title": {
+            "english": "Strawberry",
+            "russian": "Земляника"
+        },
+        "description": {
+            "english": "A sweet summer surprise. You won't regret it.",
+            "russian": "Сладкий летний сюрприз. Не пожалеете."
+        },
+        "cost": 400
+    },
+    {
+        "name": "blueberry",
+        "title": {
+            "english": "Blueberry",
+            "russian": "Голубика"
+        },
+        "description": {
+            "english": "It's small and delicious. It will pleasantly surprise you.",
+            "russian": "Маленькая и вкусная. Приятно удивит."
+        },
+        "cost": 400
+    },
+    {
+        "name": "bilberry",
+        "title": {
+            "english": "Bilberry",
+            "russian": "Черника"
+        },
+        "description": {
+            "english": "Deep, wild berry flavor.",
+            "russian": "Глубокий, дикий ягодный вкус."
+        },
+        "cost": 400
+    },
+    {
+        "name": "cherry",
+        "title": {
+            "english": "Cherry",
+            "russian": "Вишня"
+        },
+        "description": {
+            "english": "Sometimes sour, sometimes sweet.",
+            "russian": "Иногда кислая, иногда сладкая."
+        },
+        "cost": 400
+    },
+    {
+        "name": "garnet",
+        "title": {
+            "english": "Garnet",
+            "russian": "Гранат"
+        },
+        "description": {
+            "english": "A truly royal experience.",
+            "russian": "По-настоящему королевский опыт."
+        },
+        "cost": 400,
+        "crystal": true
     }
 ]

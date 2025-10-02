@@ -452,7 +452,31 @@
             "english": "A truly royal experience.",
             "russian": "По-настоящему королевский опыт."
         },
-        "cost": 400,
+        "cost": -1,
         "crystal": true
+    },
+    {
+        "name": "mushroom",
+        "title": {
+            "english": "Mushroom",
+            "russian": "Грибная"
+        },
+        "description": {
+            "english": "There are only mushrooms here.",
+            "russian": "Здесь только грибы."
+        },
+        "cost": 300
+    },
+    {
+        "name": "roll",
+        "title": {
+            "english": "Roll",
+            "russian": "Ролл"
+        },
+        "description": {
+            "english": "Why not? Why not give it a try.",
+            "russian": "Почему бы и нет. Почему бы и не попробовать."
+        },
+        "cost": 2200
     }
 ]

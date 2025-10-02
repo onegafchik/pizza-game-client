@@ -5,7 +5,7 @@ import { VitePWA, VitePWAOptions } from "vite-plugin-pwa"
 const baseURL: string = "/pizza-game-client"
 
 const PWA: Partial<VitePWAOptions> = {
-    registerType: "autoUpdate",
+    registerType: "prompt",
     workbox: {
         globPatterns: ["**/*.{html,css,js,png,ttf}"]
     },
